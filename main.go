@@ -8,13 +8,12 @@ import (
 )
 
 func main() {
-
 	dataSourceName := os.Getenv("DATABASE_URL")
 	if dataSourceName == "" {
 		log.Fatal("DATABASE_URL is not set")
 	}
 
-	if err := models.InitDB(dataSourceName); err != nil {
+	if err := models.InitDB(); err != nil {
 		log.Fatalf("Could not connect to the database: %v", err)
 	}
 
