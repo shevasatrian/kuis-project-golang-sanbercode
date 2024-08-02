@@ -8,6 +8,7 @@ import (
 )
 
 func main() {
+
 	dataSourceName := os.Getenv("DATABASE_URL")
 	if dataSourceName == "" {
 		log.Fatal("DATABASE_URL is not set")
